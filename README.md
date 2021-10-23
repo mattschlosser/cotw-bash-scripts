@@ -21,6 +21,8 @@ Example
 would download all data for Thailand from geonames.org
 and then import it into a local sqlite3 database. 
 
+You can run this multiple times to import all the different countries. 
+
 
 # Parse csv
 The second script will parse the empty csv from the [website](https://translator-client-qa.taethni.com/), getting the geonames id
