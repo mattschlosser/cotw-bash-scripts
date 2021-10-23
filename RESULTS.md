@@ -1,4 +1,4 @@
-| file | matches found | total | percent trnslated |  
+| file | matches found | total | percent translated |  
 | --- | --- | --- | --- |
 |AZE-az-translations.csv|2689|5021|53.00|
 |AZE-en-translations.csv|564|5021|11.00|
