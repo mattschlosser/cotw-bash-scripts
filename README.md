@@ -11,21 +11,25 @@ Required tools:
 Downloads
 ```sh
 # downlaods all data from the geocodes website and puts into sqlite3 db
-./get.sh <iso-2_country_coude>
+./get.sh <country_coude>
 ```
 
 Example
 ```
-./get.sh CA
+./get.sh TH
 ```
-would download all data for Canada
+would download all data for Thailand from geonames.org
+and then import it into a local sqlite3 database. 
+
+
+# Parse csv
+The second script will parse the empty csv from the [website](https://translator-client-qa.taethni.com/), getting the geonames id
+from the key column, cross referencing it with the data in sqlite3, and producing a NEW csv file. 
 
 First download a csv from the transation website
 and place it in the root directory of the project
 
 For example: `THA-th-translations.csv`
-
-# Parse csv
 ```sh
 ./scrape.sh THA-th-translations.csv
 ```
