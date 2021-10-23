@@ -11,9 +11,9 @@ then
     sed 's/"/\\"/g' "$COUNTRY.txt" >> "$COUNTRY-escaped.txt"
     sed 's/"/\\"/g' "$COUNTRY-alt.txt" >> "$COUNTRY-escaped-alt.txt"
     sqlite3 data.db < db-schema.sql
-    sqlite3 data.db <<EOF
-    .mode tabs
-    .import $COUNTRY-escaped.txt places
-    .import $COUNTRY-escaped-alt.txt alternatePlaces
+sqlite3 data.db <<EOF
+.mode tabs
+.import $COUNTRY-escaped.txt places
+.import $COUNTRY-escaped-alt.txt alternatePlaces
 EOF
 fi
