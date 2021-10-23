@@ -15,6 +15,7 @@ Example
 would download all data for Canada
 
 First download a csv from the transation website
+and place it in the root directory of the project
 
 For example: `THA-th-translations.csv`
 
