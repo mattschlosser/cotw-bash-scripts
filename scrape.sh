@@ -1,7 +1,7 @@
 #!/bin/bash
 INPUT_FILE=$1
 COTW_LANG=$(echo "$1" | awk -F- '{print $2}')
-echo "Detected lang code: $COTW_LANG";
+# echo "Detected lang code: $COTW_LANG";
 
 # COTW_LANG=th
 # create a file with just geonames id
@@ -20,13 +20,14 @@ select k.\`alternate name\` from missing m left join (select m.id, a.\`alternate
 EOF
 EMPTY=$(cat new-out.csv | sed '/^\s*$/d' | wc -l)
 TOTAL=$(cat new-out.csv | wc -l)
-echo "Translations found for $EMPTY of $TOTAL places"
+#echo "Translations found for $EMPTY of $TOTAL places"
 PERCENT=$(echo "scale=2; $EMPTY/$TOTAL*100" | bc)
-echo "That's $PERCENT%!"
-echo ""
+#echo "That's $PERCENT%!"
+#echo ""
+echo "$1,$EMPTY,$TOTAL,$PERCENT"
 # output format into standard csv
 cat "$1" | awk -F, '{print $1 FS $2}' > data-key.csv
 paste -d, data-key.csv new-out.csv > "$1-final.csv";
 # displays a preview of the final file
-echo "Here's a quick preview..."
-head "$1-final.csv"
+#echo "Here's a quick preview..."
+# head "$1-final.csv"
