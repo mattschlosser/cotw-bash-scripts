@@ -26,13 +26,15 @@ and then import it into a local sqlite3 database.
 The second script will parse the empty csv from the [website](https://translator-client-qa.taethni.com/), getting the geonames id
 from the key column, cross referencing it with the data in sqlite3, and producing a NEW csv file. 
 
-First download a csv from the transation website
+First download a csv from the translation website
 and place it in the root directory of the project
 
 For example: `THA-th-translations.csv`
+
+Then run
 ```sh
 ./scrape.sh THA-th-translations.csv
 ```
 
 This will produce a THA-th-transalations.csv-final.csv file
-
+with the translation column filled with data if it exists in geonames. 
