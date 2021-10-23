@@ -1,5 +1,11 @@
 Two bash scripts to do everything
 
+The first script downloads data from the geocodes.org website and imports it into a local database
+
+Required tools:
+- `sqlite3`
+- `bash`
+
 # Import data for a given country code
 
 Downloads
