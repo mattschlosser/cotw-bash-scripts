@@ -1,4 +1,4 @@
-CREATE TABLE places(
+CREATE TABLE IF NOT EXISTS places(
   "geonameid" INT,
   "name" TEXT,
   "asciiname" TEXT,
@@ -19,7 +19,7 @@ CREATE TABLE places(
   "timezone" TEXT,
   "modification date" TEXT
 );
-CREATE TABLE alternatePlaces(
+CREATE TABLE IF NOT EXISTS alternatePlaces(
   "alternateNameId" INT,
   "geonameid" INT,
   "isolanguage" TEXT,
@@ -32,5 +32,5 @@ CREATE TABLE alternatePlaces(
   "to" TEXT, 
   FOREIGN KEY ("geonameid") REFERENCES `places` (`geonameid`) ON DELETE CASCADE ON UPDATE NO ACTION
 );
-CREATE INDEX `placeNameIndex` ON `places` (`name`);
-CREATE TABLE missing(id int);
+CREATE INDEX IF NOT EXISTS  `placeNameIndex` ON `places` (`name`);
+CREATE TABLE IF NOT EXISTS missing(id int);
