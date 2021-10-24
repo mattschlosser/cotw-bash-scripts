@@ -40,3 +40,24 @@ Then run
 
 This will produce a THA-th-transalations.csv-final.csv file
 with the translation column filled with data if it exists in geonames. 
+
+# poewr scripts
+
+## db generator
+
+This downloads data for the 23 languages from geonames.org and populates the sqlite3 db
+
+```
+./get-all
+```
+
+## csv filler
+
+For all files that match the pattern `<3-digit-country>-<2-digit-lang-code>-translations.csv`,
+looks up if their is an alternate name for the country in the geonames sqlite3 database created above. 
+
+It generates a `<3-digit-country>-<2-digit-lang-code>-translations.csv-final.csv` file. 
+
+```
+./all
+```
