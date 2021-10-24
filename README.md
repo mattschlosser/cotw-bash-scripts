@@ -41,7 +41,9 @@ Then run
 This will produce a THA-th-transalations.csv-final.csv file
 with the translation column filled with data if it exists in geonames. 
 
-# poewr scripts
+# power scripts
+
+Two scripts that make the whole hackathon challenge easy
 
 ## db generator
 
